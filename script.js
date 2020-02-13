@@ -1,4 +1,4 @@
-fetch("./all_English_Names.json")
+fetch("all_English_Names.json")
     .then(function(resp) {
         return resp.json();
     })
