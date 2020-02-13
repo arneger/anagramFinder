@@ -3,5 +3,5 @@ fetch("all_English_Names.json")
         return resp.json();
     })
     .then(function(data){
-        console.log()
+        console.log(data)
     })
