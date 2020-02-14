@@ -6,7 +6,7 @@ function getInput(){
 
 function callJson(){
     var anagram = getInput();
-    fetch("all_English_Names.json")
+    fetch("all_English_Words.json")
         .then(function(resp) {
             return resp.json();
         })
