@@ -2,6 +2,7 @@ function getInput(){
     var input2 = document.getElementById("anagramInput").value;
     document.getElementById("anagramInput").value = '';
     return input2;
+    }
 
 function callJson(){
     var anagram = getInput();
@@ -19,4 +20,3 @@ function callJson(){
             document.getElementById("wordMatches").innerHTML = wordOutput;
         })
     }
-}
