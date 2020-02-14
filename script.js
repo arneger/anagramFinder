@@ -3,5 +3,8 @@ fetch("all_English_Names.json")
         return resp.json();
     })
     .then(function(data){
-        console.log(data["abel"])
+        var words = data["abel"]
+        for(let i = 0; i < words.length; i++){
+            console.log(words[i]);
+        }
     })
