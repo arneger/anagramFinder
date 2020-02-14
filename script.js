@@ -19,3 +19,4 @@ function callJson(){
             document.getElementById("wordMatches").innerHTML = wordOutput;
         })
     }
+}
