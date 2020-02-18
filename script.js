@@ -17,7 +17,7 @@ function callJson(){
             var words = data[anagram2];
             var wordOutput = "";
             for(let i = 0; i < words.length; i++){
-                if (wordOutput == "") {
+                if (wordOutput === "") {
                     wordOutput += words[i];
                 }
                 else {
