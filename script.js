@@ -7,7 +7,7 @@ function getInput(){
 function callJson(){
     var anagram = getInput();
     var anagramLower = anagram.toLowerCase();
-    console.log(anagramLower);
+    anagramLower = anagramLower.replace(" ", "");
     var anagram2 = anagramLower.split('').sort().join('');
     fetch("all_English_Words.json")
         .then(function(resp) {
