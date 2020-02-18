@@ -17,9 +17,9 @@ function callJson(){
             var words = data[anagram2];
             var wordOutput = "";
             for(let i = 0; i < words.length; i++){
-                console.log(words[i]);
-                wordOutput += words[i] + "<br>";
+                wordOutput += "<br>" + words[i];
             }
+            document.getElementById("anagramMatch").innerHTML = "Anagrams found for " + anagram;
             document.getElementById("wordMatches").innerHTML = wordOutput;
         })
     }
