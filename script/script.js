@@ -11,10 +11,10 @@ function getRadioInput(){
 function evaluateInput(){
     var radioInput = getRadioInput();
     if (radioInput){
-        callJson("all_English_Words.json", "Word");
+        callJson("json_anagrams/all_English_Words.json", "Word");
     }
     else {
-        callJson("all_English_Names.json", "Name");
+        callJson("json_anagrams/all_English_Names.json", "Name");
     }
 }
 
