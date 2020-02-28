@@ -39,18 +39,18 @@ function callJson(theJsonFile, valueType){
                 var wordOutput = "";
                 for(let i = 0; i < words.length; i++){
                     if (wordOutput === "") {
-                        wordOutput += words[i];
+                        wordOutput += words[i].toUpperCase();
                     }
                     else {
-                        wordOutput += "<br>" + words[i];
+                        wordOutput += "<br>" + words[i].toUpperCase();
                     }
                 }
-                document.getElementById("anagramMatch").innerHTML = valueType+' anagrams for ' + '"'+anagram+'"';
+                document.getElementById("anagramMatch").innerHTML = valueType+' anagrams for ' + '"'+anagram.toUpperCase()+'"';
                 document.getElementById("wordMatches").innerHTML = wordOutput;
             }
             catch(err) {
                 document.getElementById("wordMatches").innerHTML = '';
-                document.getElementById("anagramMatch").innerHTML = valueType + ' anagrams for ' + '"'+anagram+'"' + ' was not found';
+                document.getElementById("anagramMatch").innerHTML = valueType + ' anagrams for ' + '"'+anagram.toUpperCase()+'"' + ' was not found';
                 console.log(err);
             }
         })
