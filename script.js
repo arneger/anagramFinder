@@ -1,6 +1,6 @@
 function getRadioInput(){
-    var rd1 = document.getElementById("words");
-    if (rd1.checked){
+    var word = document.getElementById("words");
+    if (word.checked){
         return true;
     }
     else {
@@ -8,7 +8,7 @@ function getRadioInput(){
     }
 }
 
-function test(){
+function evaluateInput(){
     var radioInput = getRadioInput();
     if (radioInput){
         callJson("all_English_Words.json", "Word");
@@ -19,9 +19,9 @@ function test(){
 }
 
 function getInput(){
-    var input2 = document.getElementById("anagramInput").value;
+    var theInput = document.getElementById("anagramInput").value;
     document.getElementById("anagramInput").value = '';
-    return input2;
+    return theInput;
     }
 
 function callJson(theJsonFile, valueType){
@@ -45,7 +45,7 @@ function callJson(theJsonFile, valueType){
                         wordOutput += "<br>" + words[i];
                     }
                 }
-                document.getElementById("anagramMatch").innerHTML = valueType+' anagrams found for ' + '"'+anagram+'"';
+                document.getElementById("anagramMatch").innerHTML = valueType+' anagrams for ' + '"'+anagram+'"';
                 document.getElementById("wordMatches").innerHTML = wordOutput;
             }
             catch(err) {
@@ -55,3 +55,10 @@ function callJson(theJsonFile, valueType){
             }
         })
     }
+
+let input = document.querySelector('input');
+input.addEventListener('keyup', (e) => {
+    if(e.keyCode === 13) {
+        evaluateInput();
+    }
+})
