@@ -11,10 +11,10 @@ function getRadioInput(){
 function test(){
     var radioInput = getRadioInput();
     if (radioInput){
-        callJson("all_English_Words.json");
+        callJson("all_English_Words.json", "Word");
     }
     else {
-        callJson("all_English_Names.json");
+        callJson("all_English_Names.json", "Name");
     }
 }
 
@@ -24,7 +24,7 @@ function getInput(){
     return input2;
     }
 
-function callJson(theJsonFile){
+function callJson(theJsonFile, valueType){
     var anagram = getInput();
     var anagramLower = anagram.toLowerCase();
     anagramLower = anagramLower.replace(/\s/g, "");
@@ -44,7 +44,7 @@ function callJson(theJsonFile){
                     wordOutput += "<br>" + words[i];
                 }
             }
-            document.getElementById("anagramMatch").innerHTML = 'Anagrams found for ' + '"'+anagram+'"';
+            document.getElementById("anagramMatch").innerHTML = valueType+' anagrams found for ' + '"'+anagram+'"';
             document.getElementById("wordMatches").innerHTML = wordOutput;
         })
     }
