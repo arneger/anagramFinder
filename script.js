@@ -34,17 +34,24 @@ function callJson(theJsonFile, valueType){
             return resp.json();
         })
         .then(function(data){
-            var words = data[anagram2];
-            var wordOutput = "";
-            for(let i = 0; i < words.length; i++){
-                if (wordOutput === "") {
-                    wordOutput += words[i];
+            try {
+                var words = data[anagram2];
+                var wordOutput = "";
+                for(let i = 0; i < words.length; i++){
+                    if (wordOutput === "") {
+                        wordOutput += words[i];
+                    }
+                    else {
+                        wordOutput += "<br>" + words[i];
+                    }
                 }
-                else {
-                    wordOutput += "<br>" + words[i];
-                }
+                document.getElementById("anagramMatch").innerHTML = valueType+' anagrams found for ' + '"'+anagram+'"';
+                document.getElementById("wordMatches").innerHTML = wordOutput;
             }
-            document.getElementById("anagramMatch").innerHTML = valueType+' anagrams found for ' + '"'+anagram+'"';
-            document.getElementById("wordMatches").innerHTML = wordOutput;
+            catch(err) {
+                document.getElementById("wordMatches").innerHTML = '';
+                document.getElementById("anagramMatch").innerHTML = valueType + ' anagrams for ' + '"'+anagram+'"' + ' was not found';
+                console.log(err);
+            }
         })
     }
