@@ -20,7 +20,6 @@ function evaluateInput(){
 
 function getInput(){
     var theInput = document.getElementById("anagramInput").value;
-    document.getElementById("anagramInput").value = '';
     return theInput;
     }
 
@@ -45,12 +44,12 @@ function callJson(theJsonFile, valueType){
                         wordOutput += "<br>" + words[i].toUpperCase();
                     }
                 }
-                document.getElementById("anagramMatch").innerHTML = valueType+' anagrams for ' + '"'+anagram.toUpperCase()+'"';
+                document.getElementById("anagramMatch").innerHTML = valueType+' anagrams for ' + '"'+anagram+'"';
                 document.getElementById("wordMatches").innerHTML = wordOutput;
             }
             catch(err) {
                 document.getElementById("wordMatches").innerHTML = '';
-                document.getElementById("anagramMatch").innerHTML = valueType + ' anagrams for ' + '"'+anagram.toUpperCase()+'"' + ' was not found';
+                document.getElementById("anagramMatch").innerHTML = valueType + ' anagrams for ' + '"'+anagram+'"' + ' was not found';
                 console.log(err);
             }
         })
