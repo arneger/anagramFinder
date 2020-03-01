@@ -3,39 +3,71 @@
 }
 
 body {
-    margin: 0;
-    font-family: Arial;
-    background-color: black;
-    background-size: 20px 20px;
+    background-color: #4d0000;
+    text-align: center;
+    position: relative;
+    font-family: 'Simonetta';
+    margin: auto;
 }
 
 h1 {
-    color: white;
-    margin-top: 35px;
-    text-align: center;
+    color: #ffffcc;
+    margin-top: 30px;
+    text-shadow: 2px 1px black;
 }
 
 p {
-    color: white;
-}
-
-#mainContent {
-    text-align: center;
-}
-
-#rButtons {
-    color: white;
+    color: #ffffcc;
 }
 
 #anagramInput {
-    background-color:white;
-    color: black;
-    border: none;
-    font-size: 20px;
-    height: 5%;
+    margin:auto;
+    color: #ffffcc;
+    max-width:260px;
+    padding: 12px;
+    font-family: 'Simonetta';
+    font-size: 18px; 
+    border: 1px solid #1a0000;
+    width: 80%;
+    background: #1a0000;
+    border-radius: 10px;
 }
 
+::placeholder {
+    color: #800000;
+    font-family: 'Simonetta';
+    opacity: 1;
+  }
+
 #searchButton {
-    font-size: 15px;
-    height: 5%;
+    max-width: 260px;; /*kan endre her */
+    height: 46.7px;
+    padding: 12px; 
+    background: #800000; /* kan endre farge*/
+    color: #ffffcc; /* kan endre*/
+    font-size: 18px;
+    border: 1px solid #800000; /* kan endre både her og input*/
+    cursor: pointer;
+    border-radius: 50%;
+    
+  }
+  
+#searchButton:hover {
+    background: #b30000;
+  }
+  
+#radioButtons{
+    color: #ffffcc;
+    font-size: 18px;
+    margin-top: 13px;
+    margin-right: 11%;
+}
+
+.rButtons {
+    cursor: pointer;
+    color: blue;
+}
+
+#theOutput {
+    font-size: 20px;
 }

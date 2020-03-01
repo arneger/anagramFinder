@@ -2,23 +2,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Simonetta&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" id="replaceLink">
     <title>Anagramify</title>
 </head>
 <body>
     <header>
-        <h1>Anagramify</h1>
+        <h1>ANAGRAMIFY</h1>
     </header>
     <main>
         <div id="mainContent">
-            <p>Note: The css style on this page is not finished yet</p>
-            <div id="search">
-                <input type="text" placeholder="Anagram.." id="anagramInput" alt="Search field">
-                <button id="searchButton" type="input" title="Search Button" onclick="evaluateInput();">Search</button>
+            <div id="inputAndButton">
+                <input type="text" id="anagramInput" placeholder="Anagram.." alt="Search field">
+                <button type="input" id="searchButton" title="Search button" onclick="evaluateInput();"><i class="fa fa-search"></i></button>
             </div>
-            <div id="rButtons">
-                <input id="words" name="group1" type="radio" value="Words" checked="checked">Words</input>
-                <input id="names" name="group1" type="radio" value="Names">Names</input>
+            <div id="radioButtons">
+                <input id="words" class="rButtons" name="group1" type="radio" value="Words" checked="checked">Words</input>
+                <input id="names" class="rButtons" name="group1" type="radio" value="Names">Names</input>
             </div>
             <div id="theOutput">
                 <p id="anagramMatch"></p>
