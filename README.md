@@ -63,7 +63,7 @@ and *valueType* should be a string containing "Name" or "Word".
 the *getInput()* function) inside a variable called "*anagram*". Afterwards it turns the anagram
 into lowercase in case the user have typed with uppercase. All whitespace then gets removed
 from the input followed by sorting the input alphabetically. As explained above about the
-json files, the key value of the json files is a sorted word or name. Since we now have sorted
+JSON files, the key value of the JSON files is a sorted word or name. Since we now have sorted
 the user-input, we can search for words that match the input inside the JSON file.
 A try catch block is also added to the code where anagrams is searched for in the JSON file
 in case the key doesn't exist. If the key does not exist a message saying
