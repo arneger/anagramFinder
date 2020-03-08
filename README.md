@@ -1,4 +1,4 @@
-# anagramFinder
+# anagramFinder (Anagramify)
 Anagramify (Finds anagram matches) 
 
 This is a website where you can write letters, words or names in an
