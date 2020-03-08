@@ -46,7 +46,7 @@ with open('all_English_Names.json', 'w') as file:
 
 ```
 
-#JavaScript
+#### JavaScript
 evaluateInput() is the function that is called when the user press 'Enter' or click
 on the search button. This function checks if another function called "getRadioInput()"
 evaluates to true or false. 
